@@ -1,44 +1,89 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!-- displays site properly based on user's device -->
 
   <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
-  
+  <link rel="stylesheet" href="./css/style.css">
+
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Space+Mono:wght@400;700&display=swap" rel="stylesheet">
   <title>Frontend Mentor | Tip calculator app</title>
 
-  <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
-  <style>
-    .attribution { font-size: 11px; text-align: center; }
-    .attribution a { color: hsl(228, 45%, 44%); }
-  </style>
 </head>
+
 <body>
 
-  Bill
-
-  Select Tip %
-  5%
-  10%
-  15%
-  25%
-  50%
-  Custom
-
-  Number of People
-
-  Tip Amount
-  / person
-
-  Total
-  / person
-
-  Reset
-  
-  <div class="attribution">
-    Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
-    Coded by <a href="#">Your Name Here</a>.
+  <div class="container-main">
+    <img src="images/logo.svg" alt="" class="logo">
+    <div class="container">
+      <div class="container-inputs">
+        <label>
+          <p class="subtitle">Bill</p>
+          <div class="box__input">
+            <img src="images/icon-dollar.svg" alt="" class="img__form">
+            <input type="text" id="mount" class="form__input" value="0">
+          </div>
+        </label>
+        <div class="select-tip">
+          <p class="subtitle">Select Tip %</p>
+          <div class="calc__perc-inputs" id="opt">
+            <label class="btn calc__input-tip active">
+              <input type="radio" class="calc__input-radio" value="5">
+              5%
+            </label>
+            <label class="btn calc__input-tip">
+              <input type="radio" class="calc__input-radio" value="10">
+              10%
+            </label>
+            <label class="btn calc__input-tip">
+              <input type="radio" class="calc__input-radio" value="15">
+              15%
+            </label>
+            <label class="btn calc__input-tip">
+              <input type="radio" class="calc__input-radio" value="20">
+              25%
+            </label>
+            <label class="btn calc__input-tip">
+              <input type="radio" class="calc__input-radio" value="25">
+              25%
+            </label>
+            <label class="btn calc__input-tip custom">
+              <input type="radio" class="calc__input-radio" value="5">
+              Custom
+            </label>
+          </div>
+        </div>
+        <label>
+          <p class="subtitle">Number of People</p>
+          <div class="box__input">
+            <img src="images/icon-person.svg" alt="" class="img__form">
+            <input type="text" id="number__people" class="form__input" value="1">
+          </div>
+        </label>
+      </div>
+      <div class="container-results">
+        <div class="results">
+          <div class="tip-amount">
+            <p class="tip-amount-text">Tip Amount <span>/ person</span></p>
+            <p class="tip-amount-result">$ <span>4.27</span></p>
+          </div>
+          <div class="tip-total">
+            <p class="tip-total-text">Total <span>/ person</span></p>
+            <p class="tip-total-result">$ <span>32.79</span></p>
+          </div>
+        </div>
+        <button class="btn btn-reset">RESET</button>
+      </div>
+    </div>
   </div>
+
+  <script type="module" src="js/app.js"></script>
 </body>
+
 </html>
